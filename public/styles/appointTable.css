@@ -1,0 +1,72 @@
+
+
+.dash-img{
+    background-image: url('https://s3.envato.com/files/66458875/Stock%20Market_background_065.jpg');
+    background-position: center;
+    background-size: cover;
+     height: 15rem;
+}
+
+.dash-img h2{
+    color: white;
+    text-align: center;
+    padding-top: 6rem;
+    font-size: 4rem;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 30px auto 90px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    font-size: 11px;
+    color: var(--clr-grey-4);
+    width: 95%;
+}
+
+.styled-table thead tr {
+    background-color: rgb(5, 5, 61);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    width: 12s0px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid  rgb(5, 5, 61);
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color:  rgb(5, 5, 61);
+}
+
+.add-btn{
+    margin-top: -4rem;
+margin-left: 2rem;
+}
+
+.add-btn a{
+    width: fit-content;
+    display: block;
+    background-color: rgb(5, 5, 61);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: .3rem;
+    border: none;
+    text-decoration: none;
+}

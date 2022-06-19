@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/reserve.css">
+</head>
+
+<body>
+  <div class="heading">
+    <h1 class="half-underline">Reservations</h1>
+  </div>
+  <% appointments.forEach((appointment)=>{ %>
+  <div class="appoint-con">
+    <div class="reserve-con">
+      <div class="activity">
+        <div class="reserve-img">
+          <img src="<%=appointment.image%>" alt="">
+        </div>
+        <div class="reserve-content">
+          <label for="">Voucher NO.</label>
+          <span><%=appointment.voucher_num%></span>
+          <label for="">Guest Name</label>
+          <span><%=appointment.guest_fn%> <%=appointment.guest_ln%></span>
+          <label for="">Tour Company</label>
+          <span><%=appointment.company_nm%></span>
+          <label for="">Program Name</label>
+          <span><%=appointment.pro_nm%></span>
+          <label for="">Appointment Date</label>
+          <span><%=appointment.excur_date%></span>
+        </div>
+      </div>
+      <div class="pricings">
+        <div class="price">
+          <h2>Price</h2>
+          <span><%=appointment.pro_price%></span>
+        </div>
+        <div class="quantity">
+          <h2>Quanity</h2>
+          <span><%=appointment.guest_num%></span>
+        </div>
+        <div class="total">
+          <h2>Total</h2>
+          <span>$<%=appointment.total_payment%></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="another-btn">
+    <a href="/reserve/<%=appointment.id%>">book Another</a>
+  </div>
+
+
+  <% }) %>
+
+
+
+</body>
+
+</html>

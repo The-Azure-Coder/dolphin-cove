@@ -1,0 +1,119 @@
+.appoint-con{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.reserve-con{
+    margin-top: 4rem;
+    display: flex;
+    background-color: var(--clr-grey-10);
+    width: fit-content;
+    padding: 20px;
+    margin-left: 4rem;
+   
+
+}
+
+.reserve-img{
+    margin-right: 1.2rem;
+
+}
+
+.reserve-img img{
+    width: 15rem;
+    border-radius: .4rem;
+}
+
+.reserve-con .activity{
+    display: flex;
+    margin-right: 6rem;
+
+   
+}
+
+.reserve-con .price{
+    margin-right: 6rem;
+}
+
+
+
+.reserve-con .price h2{
+    margin-bottom: 1rem;
+    color: var(--clr-primary-5)
+
+}
+
+.reserve-con .quantity{
+    margin-right: 4rem;
+}
+
+.reserve-con .quantity h2{
+    margin-bottom: 1rem;
+    color: var(--clr-primary-5)
+}
+
+.reserve-con .total h2{
+    margin-bottom: 1rem;
+    color: var(--clr-primary-5)
+}
+
+.reserve-con .activity span{
+    display: block;
+    margin-bottom: .6rem;
+}
+
+.reserve-con .activity label {
+    color: var(--clr-primary-5);
+}
+
+.reserve-con .pricings{
+    display: flex; 
+}
+
+.reserve-content .sub-total{
+    position: absolute;
+    left:35rem;
+    bottom:8rem;
+    color: #fd9c14;
+    font-size: 20px;
+   
+}
+
+.heading{
+    margin-top: 4rem;
+ display: flex;
+ justify-content: center;
+  }
+
+
+  .half-underline {
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  .half-underline:before{
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 1px;
+      bottom: 0;
+      /*top:-1px;*/
+      left: 0%;
+      border-bottom: 1px solid #fecf8b ;
+  }
+
+  .another-btn a{
+      margin-top: 2rem;
+      background-color: #fecf8b;
+      border: none;
+      display: block;
+      width: 8rem;
+      color: white;
+      padding: 10px;
+      margin-left: 4rem;
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+  

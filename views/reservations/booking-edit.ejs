@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="/styles/testForm.css">
+
+
+<body onload="priceCal()">
+  <div class="reserve-form">
+    <form action="/appointTable/update" method="post">
+      <label class="vouch-title"> Voucher NO.</label><input class="voucher_num" name="voucher_num" type="text" value="<%=appoint.voucher_num%>">
+      <input type="hidden" value="<%=appoint.pay_id%>" name="pay_id">
+      <input type="hidden" value="<%=appoint.comp_id%>" name="comp_id">
+      <input type="hidden" value="<%=appoint.guest_id%>" name="guest_id">
+      <input type="hidden" value="<%=appoint.book_id%>" name="book_id">
+      <div class="userInfo">
+        <div class="name">
+          <label for="">First Name</label>
+          <input type="text" name="guest_fn" value="<%=appoint.guest_fn%>">
+          <label for="">Party Number</label>
+          <input type="text" id="gQty" onkeyup="priceCal()" name="guest_num" value="<%=appoint.guest_num%>">
+        </div>
+        <div class="name2">
+          <label for="">Last Name</label>
+          <input type="text" name="guest_ln" value="<%=appoint.guest_ln%>">
+
+          <label for="">Select Your Date</label>
+          <input type="date" name="excur_date" value="<%=appoint.excur_date%>">
+        </div>
+      </div>
+
+      <label for="">Select Your Location</label>
+      <select name="hot_id">
+        <option selected value="<%=appoint.hot_id%>"><%=appoint.hotel%></option>
+        <% hotels.forEach((hotel)=>{ %>
+        <option value="<%=hotel.id%>"><%=hotel.hotel%></option>
+        <%})%>
+      </select>
+      <label for="">Payment Type</label>
+      <select name="paytype_id">
+        <option selected value="<%=appoint.ptype_id%>"><%=appoint.payment_type%></option>
+        <% paymentTypes.forEach((paymentType)=>{ %>
+        <option value="<%=paymentType.id%>"><%=paymentType.payment_type%></option>
+        <% }) %>
+      </select>
+
+      <label for="">Select Programme</label>
+      <select id="prgm" name="pro_id" onchange="priceCal()">
+        <option selected value="<%=appoint.pro_id%>"><%=appoint.pro_nm%></option>
+        <% programmes.forEach((programme)=>{ %>
+        <option id="pro_opt" value="<%=programme.id%>" data-pro_price="<%=programme.pro_price%>"><%=programme.pro_nm%></option>
+        <% }) %>
+      </select>
+
+      <label for="" class="total">Payment Total</label>
+      <input type="text" class="total_input" id="total_price" readonly name="total_payment">
+
+
+      <button class="btn" type="submit">Update booking</button>
+      <div class="acc">
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/american_express.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/visa.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/Paypal_credit.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/mastercard.png" alt=""></i>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

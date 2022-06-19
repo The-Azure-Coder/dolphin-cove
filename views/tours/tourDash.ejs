@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/appointTable.css">
+</head>
+
+<body>
+  <div class="dash-img">
+    <h2>Reservations</h2>
+  </div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Voucher Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Tour Company</th>
+        <th>Hotel</th>
+        <th>Programme</th>
+        <th>Programme Price</th>
+        <th>Guest Number</th>
+        <th>Payment Type</th>
+        <th>Total payment</th>
+        <!-- <th>Payment date</th> -->
+        <th>Booking Date</th>
+        <th>Excursion Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% appointments.forEach((appointment)=>{ %>
+      <tr>
+        <td><%=appointment.voucher_num%></td>
+        <td><%=appointment.guest_fn%></td>
+        <td><%=appointment.guest_ln%></td>
+        <td><%=appointment.company_nm%></td>
+        <td><%=appointment.hotel%></td>
+        <td><%=appointment.pro_nm%></td>
+        <td><%=appointment.pro_price%></td>
+        <td><%=appointment.guest_num%></td>
+        <td><%=appointment.payment_type%></td>
+        <td><%=appointment.total_payment%></td>
+        <!-- <td><%=appointment.payment_date%></td> -->
+        <td><%=appointment.booking_date%></td>
+        <td><%=appointment.excur_date%></td>
+        <td>
+          <a href="/tourdash/edit/<%=appointment.book_id%>">Edit</a>
+          <a href="/tourdash/delete/<%=appointment.book_id%>">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+
+    </tbody>
+  </table>
+  <div class="add-btn">
+    <a href="/staffbook">Book A Program</a>
+  </div>
+
+</body>
+
+</html>

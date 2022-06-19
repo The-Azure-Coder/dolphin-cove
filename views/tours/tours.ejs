@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/tours.css">
+</head>
+
+<body>
+  <div class="tours"></div>
+
+  <div class="heading">
+    <h1 class="half-underline">Select A Tour Company to see programs</h1>
+  </div>
+
+
+  <% tours.forEach((tour)=>{ %>
+  <div class="tour-card">
+    <div class="tour-image">
+      <img src="<%=tour.company_img%>" alt="">
+    </div>
+    <div class="tour-content">
+      <h2><%=tour.company_nm%></h2>
+      <p><%=tour.company_des%></p>
+      <a href="/tours/company/<%=tour.id%>" class="tour-btn">View More</a>
+    </div>
+  </div>
+  <% }) %>
+</body>
+
+</html>

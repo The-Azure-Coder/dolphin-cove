@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/appointTable.css">
+</head>
+
+<body>
+  <div class="dash-img">
+    <h2>Payments</h2>
+  </div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Guest Number</th>\
+        <th>Payment Date</th>
+        <th>Total Payment</th>
+        <th>Payment Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% payments.forEach((payment)=>{ %>
+      <tr>
+
+        <td><%=payment.guest_fn%></td>
+        <td><%=payment.guest_ln%></td>
+        <td><%=payment.guest_num%></td>
+        <td><%=payment.payment_date%></td>
+        <td><%=payment.total_payment%></td>
+        <td><%=payment.payment_type%></td>
+      </tr>
+      <% }) %>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>

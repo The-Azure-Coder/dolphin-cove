@@ -1,0 +1,50 @@
+.welcome{
+    background-image: url('/images/welcome.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 30rem;
+}
+
+.heading{
+    padding-top: 4rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.welcome h1{
+    margin-bottom: 1.1rem;
+    color: white;
+    font-size: 70px;
+    padding-top: 5rem;
+}
+
+.welcome p{
+    color: #fff;
+    font-size: 16px;
+   
+}
+
+.welcome a{
+    display: block;
+    border: 1px solid #fff;
+    padding: 12px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 2rem;
+    border-radius: .3rem;
+    width: 12rem;
+    text-align: center;
+}
+
+.map{
+    display: block;
+    margin: 0 auto;
+}
+
+.map img{
+
+}
+

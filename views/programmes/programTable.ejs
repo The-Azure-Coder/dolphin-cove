@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/appointTable.css">
+</head>
+
+<body>
+  <div class="dash-img">
+    <h2>Programmes</h2>
+  </div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Program Name</th>
+        <th>Program Image</th>
+        <th>Program Description</th>
+        <th>Program Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% programmes.forEach((programme)=>{ %>
+      <tr>
+
+        <td><%=programme.pro_nm%></td>
+        <td><%=programme.image%></td>
+        <td><%=programme.pro_desc%></td>
+        <td><%=programme.pro_price%></td>
+        <td>
+          <a href="/programTable/edit/<%=programme.id%>">Edit</a>
+          <a href="/programTable/delete/<%=programme.id%>">delete</a>
+        </td>
+      </tr>
+      <% }) %>
+
+    </tbody>
+  </table>
+  <div class="add-btn">
+    <a href="/programTable/form">Add A Program</a>
+  </div>
+
+</body>
+
+</html>

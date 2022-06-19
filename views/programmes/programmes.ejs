@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/programmes.css">
+</head>
+
+<body>
+  <div class="background-img">
+
+  </div>
+  <div class="heading">
+    <h1 class="half-underline">Programmes</h1>
+  </div>
+  <div class="showcase">
+    <% programmes.forEach((programme)=>{ %>
+    <div class="travel-card">
+      <div class="image">
+        <!-- image -->
+        <img src="<%=programme.image%>">
+      </div>
+      <div class="content">
+
+        <!-- Programme name -->
+        <label class="category"><%=programme.pro_nm%></label>
+
+        <!-- Program Description -->
+        <h1 class="topic"><%=programme.pro_desc%></h1>
+        <div class="recommendation">
+          <div class="score">
+            <!-- Rattings -->
+            <span><%=programme.ratting%></span>
+            <i class="material-icons"> <i class="fas fa-star"></i></i>
+          </div>
+          <!-- Reviews -->
+          <div class="comment">(<%=programme.review%> views)</div>
+        </div>
+        <div class="price">
+          <div class="discount-info">save up to 30% off</div>
+          <!-- price -->
+          <div class="original-price">$<%=programme.pro_price%></div>
+        </div>
+        <div class="btn">
+          <form action="/program/reserve/<%=programme.id%>" method="post">
+            <input type="hidden" name="id" value="<%=company.id%>">
+            <button type="submit" class="prolink">book Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% })%>
+  </div>
+
+</body>
+
+</html>

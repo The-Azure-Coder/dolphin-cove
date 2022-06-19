@@ -1,0 +1,186 @@
+*{
+    text-decoration: none;
+  }
+
+  .background-img{
+    background-image: url('/images/programmes.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    background-repeat: none;
+  }
+  
+  .showcase {
+    background-color: #fefefe;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .travel-card {
+    position: relative;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    font-weight: 300;
+    background-color: white;
+    box-shadow: 0px 0px 100px -10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 350px;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+  }
+  .travel-card:hover > .button-favorite {
+    display: inline-flex;
+  }
+  .travel-card:hover > .image > img {
+    transform: scale(1.2);
+  }
+  .travel-card .image {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    overflow: hidden;
+  }
+  .travel-card .image > img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    transition: all 0.28s ease-in-out;
+  }
+  .travel-card > .content {
+    color: #545454;
+    padding: 1em 1.5em;
+  }
+  .travel-card > .content > :nth-child(1n+2) {
+    margin-top: 1em;
+  }
+  .travel-card > .content > .category {
+    font-size: 1.2em;
+    color: #bababa;
+  }
+  .travel-card > .content > .topic {
+    font-size: .9em;
+    line-height: calc(1rem * 1.2);
+    word-break: break-all;
+    max-height: calc(1rem * 2.8 * 3);
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+    font-weight: 100;
+  }
+  .travel-card > .content > .recommendation {
+    display: flex;
+    align-items: center;
+  }
+  .travel-card > .content > .recommendation > .score {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fecf8b;
+    background: linear-gradient(130deg, rgba(254, 207, 139, 1) 0%, rgba(255, 198, 115, 1) 75%, rgba(255, 187, 88, 1) 100%);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 30px;
+    user-select: none;
+  }
+  .travel-card > .content > .recommendation > .score > :first-child {
+    padding-top: 1px;
+    padding-left: 4px;
+  }
+  .travel-card > .content > .recommendation > .score > :last-child {
+    font-size: 1.1em;
+    padding-left: 6px;
+  }
+  .travel-card > .content > .recommendation > .comment {
+    color: #bababa;
+    margin-left: 1.5em;
+  }
+  .travel-card > .content > .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .travel-card > .content > .price > .discount-info {
+    color: #4fc3f7;
+  }
+  .travel-card > .content > .price > .original-price {
+    font-size: 2em;
+  }
+  .travel-card > .button-favorite {
+    width: 2.8em;
+    height: 2.8em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    color: #bababa;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, .1);
+    user-select: none;
+  }
+  .travel-card > .button-favorite:hover > :first-child {
+    display: none;
+  }
+  .travel-card > .button-favorite:hover > :last-child {
+    display: block;
+  }
+  .travel-card > .button-favorite > i {
+    font-size: 1.8em;
+    padding-top: 2px;
+  }
+  .travel-card > .button-favorite > :last-child {
+    display: none;
+    color: #ff5a60;
+  }
+  
+  .btn{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn .prolink{
+    display: block;
+    text-align: center;
+    background-color:#fecf8b;
+    border: none;
+    padding: 10px;
+    border-radius: .2rem;
+    color: white;
+    width: 8rem;
+  }
+
+  .heading{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .half-underline {
+    font-weight: 300;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  .half-underline:before{
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 1px;
+      bottom: 0;
+      /*top:-1px;*/
+      left: 0%;
+      border-bottom: 1px solid #fecf8b ;
+  }
+  
+
+

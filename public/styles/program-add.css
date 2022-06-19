@@ -1,0 +1,34 @@
+.program-form{
+    margin-left: 4rem;
+}
+
+.program-form label{
+    display: block;
+
+}
+
+.program-form input{
+    padding: 10px;
+    border-radius: .4rem;
+    border: none;
+    width: 20rem;
+    margin-bottom: .6rem;
+}
+
+.program-form textarea{
+    padding: 10px;
+    border-radius: .4rem;
+    border: none;
+    width: 20rem;
+}
+
+.program-form button{
+    margin-top: 1.2rem;
+    padding: 10px;
+    width: 20rem;
+    display: block;
+    background-color: rgb(7, 102, 255);
+    color: white;
+   
+    border: none;
+}

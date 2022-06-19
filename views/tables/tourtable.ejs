@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/appointTable.css">
+</head>
+
+<body>
+  <div class="dash-img">
+    <h2>Tour Company</h2>
+  </div>
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Company Description</th>
+        <th>Contacts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% tours.forEach((tour)=>{ %>
+      <tr>
+
+        <td><%=tour.company_nm%></td>
+        <td><%=tour.company_des%></td>
+        <td><%=tour.contact_info%></td>
+      </tr>
+      <% }) %>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>

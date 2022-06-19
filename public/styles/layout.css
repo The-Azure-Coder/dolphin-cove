@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&family=Italianno&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+
+}
+
+.dropbtn {
+     background-color: transparent;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(184, 91%, 17%);
+    --clr-primary-2: hsl(185, 84%, 25%);
+    --clr-primary-3: hsl(185, 81%, 29%);
+    --clr-primary-4: hsl(184, 77%, 34%);
+    /* primary/main color */
+    --clr-primary-5: hsl(185, 62%, 45%);
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(185, 57%, 50%);
+    --clr-primary-7: hsl(184, 65%, 59%);
+    --clr-primary-8: hsl(184, 80%, 74%);
+    --clr-primary-9: hsl(185, 94%, 87%);
+    --clr-primary-10: hsl(186, 100%, 94%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --ff-primary: "Lato", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+.sub-nav{
+    display: flex;
+    padding: 15px;
+    background-color: rgb(5, 5, 61);
+    color: rgb(232, 230, 230);
+}
+
+.sub-nav .openings{
+    margin-right: 35rem;
+    margin-left: 2rem;
+}
+
+.sub-nav span{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.sub-nav .registry span{
+    margin-right: .8rem;
+}
+.sub-nav .registry a span{
+    color: rgb(232, 230, 230);
+    margin-right: .4rem;
+}
+
+.sub-nav .registry  span i{
+    margin-right: .4rem;
+}
+
+.sub-nav .registry .login span{
+    border-right: 1px solid rgb(232, 230, 230) ;
+    padding-right: 8px;
+    margin-left: .8rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-right: 35rem;
+}
+
+.logo h1{
+    font-family: "Italianno", cursive;
+}
+
+.nav .main-nav span{
+    margin-right: 1.1rem;
+    color: rgb(43, 43, 43);
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav .logo img{
+    width: 12rem;
+    position: relative;
+}
+
+
+.footer {
+    padding-top: 3rem;
+    background-color: rgb(5, 5, 61);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.footer h2 {
+    margin-bottom: 2rem;
+}
+
+.footer .info1 p {
+    width: 20rem;
+}
+
+
+.footer .info2 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.footer .info3 {
+    margin-right: 4rem;
+
+}
+
+.footer .info2 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30rem;
+}
+
+.footer .info2 .gallery .img {
+    margin: 5px;
+}
+
+
+.footer .info3 input {
+    padding: 10px;
+    margin-bottom: 2rem;
+
+}
+
+.footer .info3 .media {
+    margin-bottom: 1.5rem;
+
+}
+
+.footer .info3 p {
+    margin-bottom: 1.5rem;
+
+}
+
+.footer .info3 .media i {
+    margin-right: .8rem;
+}
+
+footer .copy {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(1, 1, 48);
+    color: white;
+    padding: 8px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="/styles/program-add.css">
+
+<body>
+  <div class="program-form">
+    <h2>Update Program</h2>
+    <form action="/programTable/update" method="post">
+      <label for="">Prgramme Name</label>
+
+      <input type="hidden" name="id" value="<%=program.id%>">
+
+      <input type="text" name="pro_nm" value="<%=program.pro_nm%>">
+
+      <label for="">Prgramme Price</label>
+      <input type="number" name="pro_price" value="<%=program.pro_price%>">
+
+      <label for="">Prgramme Description</label>
+      <textarea name="pro_desc" id="" cols="35" rows="6"><%=program.pro_desc%></textarea>
+
+      <label for="">upload Image</label>
+      <input type="file" name="image" value="<%=program.image%>">
+
+
+      <button type="submit">Add Program</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

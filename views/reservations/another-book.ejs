@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="/styles/bookingForm.css">
+
+<body onload="priceCal()">
+
+  <div class="heading">
+    <h1 class="half-underline">Booking Form</h1>
+  </div>
+  <div class="reserve-form">
+    <div class="reserve-img">
+      <img src="https://keywestboattrips.com/wp-content/uploads/2021/03/dolphin.jpg" alt="">
+    </div>
+
+    <form class="form-content" action="/another/add" method="post">
+      <h1>Make Another reservation</h1>
+      <label>Enter Voucher NO.</label>
+      <input class="vouch_input" name="voucher_num" type="text" value="">
+
+      <input type="hidden" value="<%=company.id%>" name="comp_id">
+      <div class="userInfo">
+        <div class="name">
+          <label for="">Party Number</label>
+          <input type="text" id="gQty" onkeyup="priceCal()" name="guest_num" value="2">
+        </div>
+        <div class="name2">
+
+          <label for="">Select Your Date</label>
+          <input type="date" name="excur_date" value="">
+        </div>
+      </div>
+      <label for="">Location</label>
+      <select name="hot_id">
+        <% hotels.forEach((hotel)=>{ %>
+        <option value="<%=hotel.hot_id%>"><%=hotel.hotel%></option>
+        <%})%>
+      </select>
+
+      <label for="">Payment Type</label>
+      <select name="type_id">
+        <% paymentTypes.forEach((paymentType)=>{ %>
+        <option value="<%=paymentType.type_id%>"><%=paymentType.payment_type%></option>
+        <% }) %>
+      </select>
+
+      <label for="">Selected Programme</label>
+      <select id="prgm" name="pro_id" onchange="priceCal()">
+        <% programmes.forEach((programme)=>{ %>
+        <option id="pro_opt" value="<%=programme.pro_id%>" data-pro_price="<%=programme.pro_price%>"><%=programme.pro_nm%></option>
+        <% }) %>
+      </select>
+
+      <label for="" class="total">Payment Total</label>
+      <input type="text" class="total_input" id="total_price" readonly name="total_payment">
+
+
+      <button class="btn" type="submit">Book Now</button>
+      <div class="acc">
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/american_express.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/visa.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/Paypal_credit.png" alt=""></i>
+        <i class="pic"><img src="https://www.dolphincoveja.com/Booking/Img/mastercard.png" alt=""></i>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
