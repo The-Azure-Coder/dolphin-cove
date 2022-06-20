@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/touruserForm.css">
+</head>
+
+<body>
+  <div class="program-form">
+    <h2>Add tour Representative</h2>
+    <form action="/tourUsers/update" method="post">
+      <input type="hidden" name="id" value="<%=user.id%>">
+      <input type="hidden" name="userID" value="<%=user.userID%>">
+      <input type="hidden" name="role_id" value="<%=user.role_id%>">
+
+      <div class="section">
+        <div class="personal">
+          <label for="">First Name</label>
+          <input type="text" name="user_fname" value="<%=user.user_fname%>">
+
+          <label for="">last Name</label>
+          <input type="text" name="user_lname" value="<%=user.user_lname%>">
+        </div>
+        <div class="contact">
+          <label for="">Email</label>
+          <input type="text" name="email_address" value="<%=user.email%>">
+
+          <label for="">Password</label>
+          <input type="password" name="password" value="<%=user.password%>">
+        </div>
+      </div>
+
+      <label for="">Select Your Company</label>
+      <select name="company_id" id="">
+        <option value="<%=user.company_id%>"><%=user.company_nm%></option>
+        <% tours.forEach((tour)=>{ %>
+        <option value=" <%=tour.id%>"><%=tour.company_nm%></option>
+        <% })%>
+      </select>
+
+      <button type="submit">Add Tour Rep</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

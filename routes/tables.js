@@ -2,17 +2,6 @@ const express = require("express");
 const router = express.Router();
 const conn = require("../lib/database");
 
-router.get("/tours", (req, res) => {
-  let companyQuery = `SELECT * FROM companies`;
-  conn.query(companyQuery, (err, rows) => {
-    if (err) throw err;
-    res.render("tables/tourtable", {
-      layout: "layouts/admin-layout",
-      tours: rows,
-    });
-  });
-});
-
 router.get("/payments", (req, res) => {
   let payQuery = `SELECT 
   bt.guest_fn, 

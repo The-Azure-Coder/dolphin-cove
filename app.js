@@ -46,6 +46,8 @@ var tableRouter = require("./routes/tables");
 var staffBookRouter = require("./routes/staff-book");
 var tourDashRouter = require("./routes/tourDash");
 var tourbookRouter = require("./routes/tour-book");
+var tourProfileRouter = require("./routes/tourProfile");
+var tourUserRouter = require("./routes/tourUsers");
 
 app.use("/", homeRouter);
 app.use("/login", loginRouter);
@@ -59,6 +61,8 @@ app.use("/Table", tableRouter);
 app.use("/staffbook", staffBookRouter);
 app.use("/tourDash", tourDashRouter);
 app.use("/tourbook", tourbookRouter);
+app.use("/tourtable", tourProfileRouter);
+app.use("/tourusers", tourUserRouter);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {

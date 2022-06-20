@@ -34,7 +34,7 @@ router.post("/form/add", (req, res) => {
 
   conn.query(programQuery, programData, (err, rows) => {
     if (err) throw err;
-    res.redirect("/programmes/programTable");
+    res.redirect("/programTable");
   });
 });
 
@@ -43,7 +43,7 @@ router.get("/edit/:id", (req, res) => {
   let editQuery = `SELECT * FROM programmes WHERE id = ${id}`;
   conn.query(editQuery, (err, rows) => {
     if (err) throw err;
-    res.render("program-edit", {
+    res.render("programmes/program-edit", {
       program: rows[0],
       layout: "layouts/admin-layout",
     });
@@ -55,7 +55,7 @@ router.post("/update", (req, res) => {
 
   conn.query(updateSql, (err, rows) => {
     if (err) throw err;
-    res.redirect("/programmes/programTable");
+    res.redirect("/programTable");
   });
 });
 
@@ -64,7 +64,7 @@ router.get("/delete/:id", (req, res) => {
   let editQuery = `DELETE from programmes where id = ${id}`;
   conn.query(editQuery, (err, rows) => {
     if (err) throw err;
-    res.redirect("programmes/programTable");
+    res.redirect("/programTable");
   });
 });
 

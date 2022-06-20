@@ -70,3 +70,18 @@ margin-left: 2rem;
     border: none;
     text-decoration: none;
 }
+
+.user-btn{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(5, 5, 61);
+    border-radius: .4rem;
+    color: #ffff;
+    width: fit-content;
+    width: 9rem;
+    padding: 5px;
+    float: right;
+    margin-right: 2rem;
+
+}

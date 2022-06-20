@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="/styles/program-add.css">
+
+<body>
+  <div class="program-form">
+    <h2>Add a Tour Company</h2>
+    <form action="/tourtable/form/add" method="post" enctype="multipart/form-data">
+      <label for="">Company Name</label>
+      <input type="text" name="company_nm">
+
+      <label for="">Phone Number</label>
+      <input type="number" name="contact_info">
+
+      <label for="">Company Description</label>
+      <textarea name="company_des" id="" cols="35" rows="6"></textarea>
+
+      <label for="">upload Image</label>
+      <input type="text" name="company_img">
+
+      <button type="submit">Update Company</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

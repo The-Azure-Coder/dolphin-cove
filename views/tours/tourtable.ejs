@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="/styles/appointTable.css">
 </head>
 
-<body>
-  <div class="dash-img">
-    <h2>Tour Company</h2>
-  </div>
+<body style="height: 50rem;">
+  <a class="user-btn" href="">Add Company</a>
   <table class="styled-table">
+    <caption style="margin-bottom: .8rem;">Tour Users</caption>
     <thead>
       <tr>
         <th>Company Name</th>
         <th>Company Description</th>
         <th>Contacts</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -28,12 +28,15 @@
         <td><%=tour.company_nm%></td>
         <td><%=tour.company_des%></td>
         <td><%=tour.contact_info%></td>
+        <td>
+          <a href="/tourtable/edit/<%=tour.id%>">Edit</a>
+          <a href="/tourtable/delete/<%=tour.id%>">Delete</a>
+        </td>
       </tr>
       <% }) %>
 
     </tbody>
   </table>
-
 </body>
 
 </html>
