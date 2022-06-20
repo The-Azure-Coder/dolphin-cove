@@ -25,6 +25,7 @@ router.post("/auth", (req, res) => {
           req.session.company_id = rows[0].company_id;
           req.session.role_id = rows[0].role_id;
           console.log(rows[0].role_id);
+          console.log(rows[0].company_id);
 
           if (rows[0].role_id == 1) {
             res.redirect("/appointTable");
